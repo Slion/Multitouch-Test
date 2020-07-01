@@ -1,6 +1,7 @@
 package com.leocardz.multitouch.test;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,8 +9,9 @@ import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 @SuppressLint("NewApi")
-public class MultitouchTest extends ActionBarActivity {
+public class MultitouchTest extends AppCompatActivity {
     static int screenHeight, screenWidth, screenDensity;
     int androidVersion = Build.VERSION.SDK_INT;
     static int lines = 1, rings = 0, colorChanging = 0, numberShowing = 1,
@@ -55,11 +57,13 @@ public class MultitouchTest extends ActionBarActivity {
 
         setContentView(R.layout.main);
 
+
         ab = getSupportActionBar();
 
         ab.setHomeButtonEnabled(true);
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setTitle(R.string.app_name);
+
 
         mv = new MultiTouch(this);
         setContentView(mv);

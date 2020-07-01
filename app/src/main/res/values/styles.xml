@@ -21,7 +21,6 @@
     </style>
 
     <style name="App.ThemeMainWhite" parent="App.Theme">
-        <item name="homeAsUpIndicator">@drawable/abc_ic_ab_back_holo_dark</item>
         <item name="actionMenuTextColor">@android:color/white</item>
         <item name="dividerVertical">@drawable/divider_vertical_dark</item>
     </style>
